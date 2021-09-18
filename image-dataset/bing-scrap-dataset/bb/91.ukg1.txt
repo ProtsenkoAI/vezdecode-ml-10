@@ -1,6 +1,0 @@
-Text      Label
-------  -------
-from          1
-from          1
-lr_r          1
-from          1

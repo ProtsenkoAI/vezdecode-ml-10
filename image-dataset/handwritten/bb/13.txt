@@ -1,3 +1,0 @@
-Text              Label
---------------  -------
-sin xcos xdx=?        1

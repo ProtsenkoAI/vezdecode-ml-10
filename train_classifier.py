@@ -8,6 +8,8 @@ from pathlib import Path
 from data import MathExpressionsDataset
 from model import RobertaClassificationHead
 
+from tqdm import tqdm
+
 
 def train(epochs=10, bs=32, lr=1e-6):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -35,8 +37,10 @@ def train(epochs=10, bs=32, lr=1e-6):
     ]
     optimizer = AdamW(optimizer_grouped_parameters, lr=lr)
 
+    print("total epochs:", epochs)
     for epoch in range(epochs):
-        for idx, (text_batch, label) in enumerate(dataloader):
+        print("epoch idx", epoch)
+        for idx, (text_batch, label) in tqdm(enumerate(dataloader), total=len(dataloader)):
             encoding = tokenizer(text_batch, return_tensors='pt', padding=True, truncation=True)
             input_ids = encoding['input_ids']
             attention_mask = encoding['attention_mask']

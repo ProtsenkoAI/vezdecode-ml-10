@@ -12,8 +12,8 @@ class Classifier():
 
     
     def load_classifier(self, model_path):
-        self.model = BertForSequenceClassification.from_pretrained(model_path, cache_dir="./models")
-        self.tokenizer = BertTokenizer.from_pretrained("bert-base-uncased", cache_dir="./models")
+        self.model = BertForSequenceClassification.from_pretrained(model_path)
+        self.tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
         
         # self.model = RobertaForSequenceClassification.from_pretrained('roberta-base', cache_dir="./models")
         # self.model.classifier = RobertaClassificationHead()
