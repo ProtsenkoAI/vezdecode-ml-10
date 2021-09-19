@@ -10,6 +10,7 @@ git clone git@github.com:ProtsenkoAI/vezdecode-ml-10.git
 cd vezdecode-ml-10/
 pipenv install
 pipenv shell
+mkdir -p models/math-classifier
 ```
 At this moment insert model and config to models/math-classifier/
 ```
