@@ -19,3 +19,5 @@ python boundingbox.py <PATH TO JPG TO INPUT> <PATH TO OUT DIRECTORY>
 python boundingbox.py ./test_model_samples/6.jpg ./predictions/
 ```
 
+## Описание решения
+Модель взята [отсюда](https://github.com/divya1211/math-expression-detection)
